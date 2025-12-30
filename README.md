@@ -1,2 +1,2 @@
 # DQN
-DQN achieving 10-episode average score of ~200 on CartPole. Not optimized and doesn't process in parallel, but it learns!
+DQN achieving 10-episode average score of ~200 on CartPole. Not optimized and doesn't process in parallel, but it learns! Moving on to PPO now...
