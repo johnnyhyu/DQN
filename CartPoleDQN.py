@@ -42,7 +42,7 @@ for j in range(100):# can adjust episodes
             else:
                 action = 1
         new_observation, reward, terminated, truncated, info = env.step(action)
-        replay.append((old_observation, action, reward, new_observation, terminated))#input: observation + action; compare to reward + new observation
+        replay.append((old_observation, action, reward, new_observation, terminated))
         score += reward
         if (len(replay) > 1000): #can adjust replay buffer size
             replay.pop(0)
@@ -72,4 +72,5 @@ for j in range(100):# can adjust episodes
             target.load_state_dict(main.state_dict())
         episode_over = terminated or truncated
     print(score)
+
 env.close()
